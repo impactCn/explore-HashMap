@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7014e7f2-0008-4dd4-bd66-6ce27c1b27b1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,7 +17,7 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="HashMap.java" pinned="false" current-in-tab="true">
+            <file leaf-file-name="HashMap.java" pinned="false" current-in-tab="false">
               <entry file="jar://D:/Java/jdk1.8.0_121/src.zip!/java/util/HashMap.java">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="266">
@@ -35,11 +34,11 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+            <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/Main.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="467">
-                    <caret line="192" column="13" selection-start-line="192" selection-start-column="13" selection-end-line="192" selection-end-column="13" />
+                  <state relative-caret-position="210">
+                    <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -67,8 +66,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="630">
-                <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+              <first_editor relative-caret-position="516">
+                <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
               </first_editor>
               <second_editor />
             </state>
@@ -119,6 +118,11 @@
             <path>
               <item name="HashMap源码解析" type="b2602c69:ProjectViewProjectNode" />
               <item name="HashMap源码解析" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HashMap源码解析" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HashMap源码解析" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -173,12 +177,12 @@
       <workItem from="1576121767734" duration="6751000" />
       <workItem from="1576144093730" duration="23000" />
       <workItem from="1576722613792" duration="5369000" />
-      <workItem from="1576805975791" duration="6987000" />
+      <workItem from="1576805975791" duration="8427000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30292000" />
+    <option name="totallyTimeSpent" value="31732000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="555" y="0" width="1698" height="1407" extended-state="0" />
@@ -276,16 +280,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="192" column="13" selection-start-line="192" selection-start-column="13" selection-end-line="192" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Java/jdk1.8.0_121/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -301,11 +295,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="630">
-            <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <first_editor relative-caret-position="516">
+            <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
           </first_editor>
           <second_editor />
         </state>
