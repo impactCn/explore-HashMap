@@ -12,6 +12,8 @@ public class Main {
         map.put("刘备", "蜀国");
         map.put("孙策", "吴国");
 
+        map.get("刘备");
+
         int h;
         // 哈希值为674287
         h = "刘备".hashCode();
@@ -266,6 +268,50 @@ public class Main {
             }
         }
         return newTab;
+    }
+
+    /**
+     * 获取节点信息
+     * @param hash
+     * @param key
+     * @return
+     */
+    final HashMap.Node<K,V> getNode(int hash, Object key) {
+        HashMap.Node<K,V>[] tab;
+        HashMap.Node<K,V> first, e;
+        int n; K k;
+        // HashMap不为null，且长度大于0
+        // 数组不为null
+        if ((tab = table) != null && (n = tab.length) > 0 &&
+                // hashCode位运算定位数组下标
+                (first = tab[(n - 1) & hash]) != null) {
+            // always check first node
+            // 如果取得值刚好是第一个
+            // 比较key是否相等、hashCode是否相等
+            if (first.hash == hash &&
+                    ((k = first.key) == key || (key != null && key.equals(k)))) {
+                // 返回第一个
+                return first;
+            }
+            // 不是第一个，且数组底下的链表或者红黑树不为null
+            if ((e = first.next) != null) {
+                // 是红黑树
+                if (first instanceof HashMap.TreeNode) {
+                    // 查询红黑树返回结果
+                    return ((HashMap.TreeNode<K,V>)first).getTreeNode(hash, key);
+                }
+                // 是链表
+                do {
+                    // 一个一个遍历出结果
+                    if (e.hash == hash &&
+                            ((k = e.key) == key || (key != null && key.equals(k)))) {
+                        return e;
+                    }
+
+                } while ((e = e.next) != null);
+            }
+        }
+        return null;
     }
 
 }
