@@ -14,6 +14,8 @@ public class Main {
 
         map.get("刘备");
 
+        map.remove("刘备");
+
         int h;
         // 哈希值为674287
         h = "刘备".hashCode();
@@ -231,8 +233,11 @@ public class Main {
                     oldTab[j] = null;
                     if (e.next == null)
                         newTab[e.hash & (newCap - 1)] = e;
-                    else if (e instanceof HashMap.TreeNode)
+                    else if (e instanceof HashMap.TreeNode) {
+                        // 红黑树的长度小于等于6的时候 转成链表
                         ((HashMap.TreeNode<K,V>)e).split(this, newTab, j, oldCap);
+                    }
+
                     else { // preserve order
                         HashMap.Node<K,V> loHead = null, loTail = null;
                         HashMap.Node<K,V> hiHead = null, hiTail = null;
@@ -309,6 +314,78 @@ public class Main {
                     }
 
                 } while ((e = e.next) != null);
+            }
+        }
+        return null;
+    }
+
+    /**
+     * 删除节点
+     * @param hash
+     * @param key
+     * @param value
+     * @param matchValue
+     * @param movable
+     * @return
+     */
+    final HashMap.Node<K,V> removeNode(int hash, Object key, Object value,
+                                       boolean matchValue, boolean movable) {
+        HashMap.Node<K,V>[] tab;
+        HashMap.Node<K,V> p;
+        int n, index;
+        // HashMap不为null且长度切大于0
+        // 通过位运算计算key的hashCode确定数组下标，来确定key的位置，不为null
+        if ((tab = table) != null && (n = tab.length) > 0 &&
+                (p = tab[index = (n - 1) & hash]) != null) {
+            HashMap.Node<K,V> node = null, e;
+            K k;
+            V v;
+            // 在数组的key
+            if (p.hash == hash &&
+                    ((k = p.key) == key || (key != null && key.equals(k)))) {
+                node = p;
+            }
+            // 数组底下的数据结构的key
+            else if ((e = p.next) != null) {
+                // 在红黑树上的key
+                if (p instanceof HashMap.TreeNode) {
+                    // 红黑树先序查询出来赋值给一个节点
+                    node = ((HashMap.TreeNode<K,V>)p).getTreeNode(hash, key);
+                }
+                // 在链表上的key
+                else {
+                    // 链表遍历
+                    do {
+                        // 确定key
+                        if (e.hash == hash &&
+                                ((k = e.key) == key ||
+                                        (key != null && key.equals(k)))) {
+                            node = e;
+                            break;
+                        }
+                        p = e;
+                    } while ((e = e.next) != null);
+                }
+            }
+            //
+            if (node != null && (!matchValue || (v = node.value) == value ||
+                    (value != null && value.equals(v)))) {
+                // 红黑树删除
+                if (node instanceof HashMap.TreeNode) {
+                    ((HashMap.TreeNode<K,V>)node).removeTreeNode(this, tab, movable);
+                }
+                // 数组删除，且底下是链表
+                else if (node == p) {
+                    tab[index] = node.next;
+                }
+                // 链表删除，将要删除的节点的最后一个指向null，就可删除
+                else {
+                    p.next = node.next;
+                }
+                ++modCount;
+                --size;
+                afterNodeRemoval(node);
+                return node;
             }
         }
         return null;
