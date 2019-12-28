@@ -66,8 +66,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="604">
-                <caret line="111" column="41" selection-start-line="111" selection-start-column="41" selection-end-line="111" selection-end-column="41" />
+              <first_editor relative-caret-position="176">
+                <caret line="113" column="17" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="17" />
               </first_editor>
               <second_editor />
             </state>
@@ -104,8 +104,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1270" />
-    <option name="y" value="48" />
+    <option name="x" value="770" />
+    <option name="y" value="61" />
     <option name="width" value="1698" />
     <option name="height" value="1167" />
   </component>
@@ -187,16 +187,15 @@
       <workItem from="1577237806653" duration="3153000" />
       <workItem from="1577323817873" duration="4199000" />
       <workItem from="1577411253169" duration="611000" />
-      <workItem from="1577496835229" duration="12870000" />
+      <workItem from="1577496835229" duration="13199000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64550000" />
+    <option name="totallyTimeSpent" value="64879000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1270" y="48" width="1698" height="1167" extended-state="0" />
-    <editor active="true" />
+    <frame x="770" y="61" width="1698" height="1167" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -208,7 +207,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32939324" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="right" id="Mybatis datasource" order="3" show_stripe_button="false" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.40661478" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.40661478" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.21794872" />
       <window_info anchor="right" id="Database" order="3" />
@@ -467,8 +466,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="604">
-            <caret line="111" column="41" selection-start-line="111" selection-start-column="41" selection-end-line="111" selection-end-column="41" />
+          <first_editor relative-caret-position="176">
+            <caret line="113" column="17" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="17" />
           </first_editor>
           <second_editor />
         </state>

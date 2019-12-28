@@ -79,7 +79,7 @@ p = tab[i = (n - 1) & hash]
 假设，负载因子为0.75，占有数组的3分之2，后续put进来的值，多了之前的一倍 + 之前的三分之一
 数组选择的位置，减少了hash碰撞，同时提高了扩容的阈值，减少了扩容次数。  
 可以说0.75这个值对空间利用率和时间利用率的折中选择。   
-补充：** 我在https://stackoverflow.com/questions/10901752/what-is-the-significance-of-load-factor-in-hashmap 看到一条更好的答案，就是将负载因子设置为0.7左右 **  
+补充：**我在https://stackoverflow.com/questions/10901752/what-is-the-significance-of-load-factor-in-hashmap 看到一条更好的答案，就是将负载因子设置为0.7左右**  
 问：hashMap为什么当链表的长度为8时转为红黑树？  
 答：
 ```angular2html
